@@ -1,0 +1,104 @@
+[debug] [2021-06-15T14:32:13.994Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T14:32:13.996Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-15T14:32:13.997Z] CLI Version:   9.12.1
+[debug] [2021-06-15T14:32:13.997Z] Platform:      win32
+[debug] [2021-06-15T14:32:13.997Z] Node Version:  v15.5.0
+[debug] [2021-06-15T14:32:13.998Z] Time:          Tue Jun 15 2021 15:32:13 GMT+0100 (British Summer Time)
+[debug] [2021-06-15T14:32:13.998Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-15T14:32:14.004Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-15T14:32:14.004Z] > authorizing via signed-in user (kanukmr0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Port
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-06-15T14:32:58.730Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-15T14:32:58.731Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-15T14:32:59.300Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Tue, 15 Jun 2021 14:32:58 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T14:32:59.412Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"irebase projects:create","name":"Portfolio"}
+[debug] [2021-06-15T14:33:01.249Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 15 Jun 2021 14:32:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1433","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T14:33:01.249Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [Cannot create domain prefixed projects]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"Cannot create domain prefixed projects"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-06-15T14:33:01.677Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [Cannot create domain prefixed projects]
+    at module.exports (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.<anonymous> (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:482:28)
+    at IncomingMessage.emit (node:events:388:22)
+    at IncomingMessage.EventEmitter.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1305:12)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2021-06-15T14:33:13.899Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T14:33:13.900Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-15T14:33:13.901Z] CLI Version:   9.12.1
+[debug] [2021-06-15T14:33:13.901Z] Platform:      win32
+[debug] [2021-06-15T14:33:13.901Z] Node Version:  v15.5.0
+[debug] [2021-06-15T14:33:13.902Z] Time:          Tue Jun 15 2021 15:33:13 GMT+0100 (British Summer Time)
+[debug] [2021-06-15T14:33:13.902Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-15T14:33:13.907Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-15T14:33:13.908Z] > authorizing via signed-in user (kanukmr0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Port
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-06-15T14:34:03.741Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"portfolio","name":"portfolio"}
+[debug] [2021-06-15T14:34:05.580Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 15 Jun 2021 14:34:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1469","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T14:34:05.580Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-06-15T14:34:05.917Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.<anonymous> (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\Kanishak\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:482:28)
+    at IncomingMessage.emit (node:events:388:22)
+    at IncomingMessage.EventEmitter.emit (node:domain:470:12)
+    at endReadableNT (node:internal/streams/readable:1305:12)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID portfolio. Please try again with a unique project ID.
